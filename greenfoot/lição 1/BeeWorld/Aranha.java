@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author Fla 
  * @version 2024/04/24
  */
-public class Aranha extends Actor
+public class Aranha extends Inseto
 {
     /**
      * método para aranha girarar no act ou run
@@ -21,5 +21,6 @@ public class Aranha extends Actor
             //gira aleatoriamente de -45 a 45
             turn(Greenfoot.getRandomNumber(91)-45);
         }
+        verificarCanto();
     }
 }
