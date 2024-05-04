@@ -8,6 +8,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Mosca extends Inseto
 {
+    //campo e fields
+    private int velocidade;
+    //constructor
+    public Mosca () {
+        velocidade = 1;
+    }
+    //constructor personaliado com sobrecarga de metodos
+    public Mosca(int vel, int ang){
+        velocidade = vel;
+        setRotation(ang);
+    }
     /**
      * método act é executado sempre que apertarmos o botão act ou
      * ficará em execução quando apertar o botão run.
@@ -15,7 +26,7 @@ public class Mosca extends Inseto
     public void act()
     {
         // Add your action code here.
-        move(1);
+        move(velocidade);
         verificarCanto();    
     }
 }
