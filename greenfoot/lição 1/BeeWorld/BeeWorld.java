@@ -10,6 +10,8 @@ public class BeeWorld extends World
 {
     // campo e fields
     private Abelha abelha = null;
+    private int score;
+    private Placar placar = null;
     /**
      * Constructor for objects of class BeeWorld.
      * 
@@ -29,10 +31,10 @@ public class BeeWorld extends World
     {
         abelha = new Abelha();
         addObject(abelha,36,40);
-        
+
         Aranha aranha = new Aranha();
         addObject(aranha,400,300);
-        
+
         //utilizando o for para criar as moscas 
         for (int i=0;i<20; i++){
             int pX = Greenfoot.getRandomNumber(getWidth());
@@ -43,12 +45,23 @@ public class BeeWorld extends World
         }
         Mosca mosca = new Mosca();
         addObject(mosca,36,200);
-
+        //criando o placar no mundo 
+        placar = new Placar();
+        addObject(placar,28,572);
+        placar.setLocation(200,580);
     }
+
     /**
      * método patra retorno da abelha
      */
     public Abelha getAbelha() {
         return abelha;
+    }
+    /**
+     * mé
+     */
+    public void addScore(int value){
+        score+= value;
+        placar.setTexto("Score: " + score);
     }
 }
