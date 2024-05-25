@@ -13,7 +13,7 @@ public class Exercício2 {
 		//vamos separar nome de sobrenome
 		String primeiroNome = nome.substring(0,(nome+" ").indexOf(" "));
 		//pegar o ultimo sobrenome
-		String lastName = nome.substring(nome.lastIndexOf(" ")+1);
+		String lastName = nome.substring(nome.lastIndexOf("  ")+1);
 		System.out.println(primeiroNome);
 		System.out.println(lastName);
 		//fechando o scn
